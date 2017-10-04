@@ -20,6 +20,7 @@ Or install it yourself as:
 ```bash
 $ gem install easy_static_pages
 ```
+## Garantia da Qualidade [![Code Climate](https://codeclimate.com/github/gorails/easy_static_pages/badges/gpa.svg)](https://codeclimate.com/github/gorails/easy_static_pages)
 
 ## Contributing
 Contribution directions go here.
