@@ -1,0 +1,38 @@
+<%= form_with(model: page, local: true) do |form| %>
+    <% if page.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+          <ul>
+            <% page.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :page_name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :permalink %>
+      <%= form.text_field :permalink, id: :page_permalink %>
+    </div>
+
+    <div class="field">
+      <%= form.label :content %>
+      <%= form.text_area :content, class: 'summernote_description', id: :page_content %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>
+<script>
+    $(document).ready(function () {
+        $('.summernote_description').summernote();
+        $('.summernote_local').summernote();
+    });
+</script>
