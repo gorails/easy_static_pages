@@ -1,7 +1,3 @@
-
-
-
-
 <%= provide :page_title, I18n.t('link_categories.index.header') %>
 <%= provide :breadcrumb do %>
     <li><%= I18n.t('activerecord.models.link_category.other') %></li>
@@ -22,7 +18,7 @@
       <div class="block-header text-right">
         <h3 class="block-title">
         </h3>
-        <span >
+        <span>
           <%= link_to I18n.t('link_categories.new.new'), new_page_path, class: 'btn btn-sm btn-square btn-success' %>
         </span>
       </div>
@@ -32,17 +28,25 @@
           <tr>
             <th><%= t('activerecord.attributes.page.name') %></th>
             <th><%= t('activerecord.attributes.page.permalink') %></th>
-            <th class="text-center" style="width: 100px;"><%=t 'misc.actions' %></th>
+            <th class="text-center" style="width: 150px;"><%= t 'misc.actions' %></th>
           </tr>
           </thead>
           <tbody id='link_categories'>
 
-            <% @pages.each do |page| %>
-                <tr>
-                  <td><%= page.name %></td>
-                  <td><%= page.permalink %></td>
-                </tr>
-            <% end %>
+          <% @pages.each do |page| %>
+              <tr>
+                <td><%= page.name %></td>
+                <td><%= page.permalink %></td>
+                <td>
+
+                  <% if current_user and current_user.admin? %>
+                      <%= page.decorate.link_to_visualizar %>
+                      <%= page.decorate.link_to_editar %>
+                      <%= page.decorate.link_to_excluir %>
+                  <% end %>
+                </td>
+              </tr>
+          <% end %>
           </tbody>
         </table>
       </div>
