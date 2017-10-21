@@ -1,6 +1,6 @@
-<%= provide :page_title, I18n.t('link_categories.index.header') %>
+<%= provide :page_title, I18n.t('pages.index.header') %>
 <%= provide :breadcrumb do %>
-    <li><%= I18n.t('activerecord.models.link_category.other') %></li>
+    <li><%= I18n.t('activerecord.models.page.other') %></li>
 <% end %>
 
 <main id="main-container" style="min-height: 530px;">
@@ -8,7 +8,7 @@
     <div class="row items-push">
       <div class="col-sm-7">
         <h1 class="page-heading">
-          <%= t('link_categories.index.title') %>
+          <%= t('pages.index.title') %>
         </h1>
       </div>
     </div>
@@ -19,7 +19,7 @@
         <h3 class="block-title">
         </h3>
         <span>
-          <%= link_to I18n.t('link_categories.new.new'), new_page_path, class: 'btn btn-sm btn-square btn-success' %>
+          <%= link_to I18n.t('pages.new.new'), new_page_path, class: 'btn btn-sm btn-square btn-success' %>
         </span>
       </div>
       <div class="block-content">

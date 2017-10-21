@@ -1,0 +1,35 @@
+pt-BR:
+  pages:
+    default: &default
+      h1: Page
+      header: "Lista de pages"
+      block_header: pages
+    index:
+      <<: *default
+      header: "Lista de pages"
+      title: "Lista de pages"
+      block_header: pages
+    show:
+      <<: *default
+      header: "Detalhes: %{resource}"
+    edit:
+      <<: *default
+      header: "Editar: %{resource}"
+    new:
+      <<: *default
+      header: "Cadastrar Page"
+    create:
+      alert: "Page não pode ser cadastrado."
+      notice: "Page cadastrado com sucesso."
+    update:
+      alert: "Page não pode ser atualizado."
+      notice: "Page atualizado com sucesso."
+    destroy:
+      alert: "Page não pode ser excluído."
+      notice: "Page excluído com sucesso."
+      
+  helpers:
+    submit:
+      page:
+        create: "Cadastrar %{model}"
+        update: "Atualizar %{model}"
