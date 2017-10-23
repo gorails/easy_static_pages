@@ -1,0 +1,15 @@
+pt-BR:
+  activerecord:
+    models:
+      page:
+        one: "Page"
+        other: "pages"
+        explain: "Page"
+
+    attributes:
+      page:
+        name: "nome"
+        permalink: "Link Permanente"
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
